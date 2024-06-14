@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertar Imagen en Canvas</title>
+</head>
+<body>
+    <canvas id="miCanvas" width="400" height="300" ></canvas>
+    <script>
+        const canvas = document.getElementById('miCanvas');
+        const ctx = canvas.getContext('2d');
+     
+        // Establecer el color de fondo
+        ctx.fillStyle = "#B5CDFF";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+       
+        const dibujo = new Image();
+       
+        dibujo.src = 'perro2.jpg';
+
+        dibujo.onload = function() {
+        ctx.drawImage(dibujo, 100, 50);
+        };
+    </script>
+</body>
+</html>
